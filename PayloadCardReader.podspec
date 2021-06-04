@@ -1,42 +1,25 @@
-#
-# Be sure to run `pod lib lint PayloadCardReader.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'PayloadCardReader'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of PayloadCardReader.'
+  s.summary          = 'Device extension of Payload iOS library'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Adds mobile card reader device support to the
+Payload iOS library for processing EMV, Swipe, and NFC payments.
+More at https://docs.payload.co/card-readers
                        DESC
 
-  s.homepage         = 'https://github.com/Ian Halpern/PayloadCardReader'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/payload-code/payload-cardreader-ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Ian Halpern' => 'ian.h.halpern@gmail.com' }
-  s.source           = { :git => 'https://github.com/Ian Halpern/PayloadCardReader.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Payload' => 'help@payload.co' }
+  s.source           = { :git => 'https://github.com/payload-code/payload-cardreader-ios.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'PayloadCardReader/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'PayloadCardReader' => ['PayloadCardReader/Assets/*.png']
-  # }
+  s.dependency 'PayloadAPI', '~> 0.1.1'
+  s.vendored_libraries = 'PayloadCardReader/Lib/*.a', 'PayloadCardReader/Lib/lib*.dylib', 'PayloadCardReader/Lib/lib*.tbd'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
