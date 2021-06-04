@@ -19,7 +19,9 @@ More at https://docs.payload.co/card-readers
 
   s.source_files = 'PayloadCardReader/Classes/**/*'
   
-  s.dependency 'PayloadAPI', '~> 0.1.1'
+  s.dependency 'PayloadAPI', '~> 0.2.0'
   s.vendored_libraries = 'PayloadCardReader/Lib/*.a', 'PayloadCardReader/Lib/lib*.dylib', 'PayloadCardReader/Lib/lib*.tbd'
 
+  s.xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
