@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PayloadCardReader'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Device extension of Payload iOS library'
 
 
@@ -27,4 +27,6 @@ More at https://docs.payload.co/card-readers
      'CLANG_CXX_LANGUAGE_STANDARD' => 'c++11',
      'CLANG_CXX_LIBRARY' => 'libc++'
   }
+  
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 armv7 x86_64' }
 end
