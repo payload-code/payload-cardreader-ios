@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PayloadCardReader'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Device extension of Payload iOS library'
 
 
@@ -15,7 +15,7 @@ More at https://docs.payload.co/card-readers
   s.author           = { 'Payload' => 'help@payload.co' }
   s.source           = { :git => 'https://github.com/payload-code/payload-cardreader-ios.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'PayloadCardReader/Classes/**/*'
   
