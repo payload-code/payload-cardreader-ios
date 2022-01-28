@@ -1,7 +1,8 @@
 Pod::Spec.new do |s|
   s.name             = 'PayloadCardReader'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'Device extension of Payload iOS library'
+  s.swift_versions   = '4.2'
 
 
   s.description      = <<-DESC
@@ -19,7 +20,7 @@ More at https://docs.payload.co/card-readers
 
   s.source_files = 'PayloadCardReader/Classes/**/*'
   
-  s.dependency 'PayloadAPI', '~> 0.2.0'
+  s.dependency 'PayloadAPI', '~> 0.2.2'
   s.vendored_libraries = 'PayloadCardReader/Lib/*.a'
   
   s.libraries = 'c++'
